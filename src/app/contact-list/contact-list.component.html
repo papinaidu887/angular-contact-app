@@ -1,0 +1,26 @@
+<h4> Contact List </h4>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Contact Name</th>
+            <th> Contact Email</th>
+            <th> Contact Number </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = 'let contact of contacts'>
+            <td>{{contact.contactName}}</td>
+            <td>{{contact.contactEmail}}</td>
+            <td>{{contact.contactNumber}}</td>
+            <td>
+                <button (click) = "updateContact(contact.contactId)" class = "btn btn-info">update</button>
+            &nbsp;
+                <button (click)="deleteContact(contact.contactId)" class="btn btn-danger" >DELETE</button>
+                  
+            </td>
+        </tr>
+    </tbody>
+
+</table>
